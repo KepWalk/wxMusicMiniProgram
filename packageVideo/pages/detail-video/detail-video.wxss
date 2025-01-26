@@ -1,0 +1,20 @@
+/* pages/detail-video/detail-video.wxss */
+/* 固定页面的高度 */
+page {
+    height: 100vh;
+}
+
+.video {
+    width: 100%;
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+}
+
+.content {
+    height: calc(100% - 225px);
+}
+
+/* .related-video {
+    margin-top: 225px;
+} */

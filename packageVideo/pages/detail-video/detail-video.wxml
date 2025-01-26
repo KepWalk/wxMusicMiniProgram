@@ -1,0 +1,19 @@
+<!--pages/detail-video/detail-video.wxml-->
+<video class="video" src="{{mvUrl}}" autoplay danmu-list="{{danmuList}}" referrer-policy="origin" />
+
+<scroll-view class="content" scroll-y>
+    <view class="info">
+        <view>{{mvInfo.artistName}}</view>
+        <!-- <view>{{mvInfo.desc}}</view> -->
+    </view>
+
+    <view class="related-video">
+        <block wx:for="{{relatedVideo}}" wx:key="vid">
+            <view class="item">
+                <!-- 现在已经没有这里的数据咧 -->
+                <image src="{{item.coverImgUrl}}" mode="widthFix" />
+                <view>{{item.name}}</view>
+            </view>
+        </block>
+    </view>
+</scroll-view>

@@ -1,0 +1,26 @@
+<!--components/nav-bar/nav-bar.wxml-->
+<!-- 自定义导航栏 -->
+<view class="nav-bar">
+    <!-- 状态栏需要占据一定的位置 -->
+    <view class="status" style="height: {{statusHeight}}px;"></view>
+    <view class="nav">
+        <view class="left" bind:tap="onLeftTap">
+            <view class="slot">
+                <slot name="left"></slot>
+            </view>
+            <view class="default">
+                <image class="icon" src="/assets/images/icons/arrow-left.png"/>
+            </view>
+        </view>
+        <view class="center">
+            <view class="slot">
+                <slot name="center"></slot>
+            </view>
+            <!-- 默认插槽：直接展示标题 -->
+            <view class="default">
+                {{title}}
+            </view>
+        </view>
+        <view class="right"></view>
+    </view>
+</view>

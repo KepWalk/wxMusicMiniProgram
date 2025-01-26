@@ -1,0 +1,13 @@
+<!--components/video-item/video-item.wxml-->
+<wxs src="/utils/format.wxs" module="fmt"/>
+<!-- 在组件根元素绑定跳转事件，而不是在组件元素绑定根组件，避免还要使用event传参，组件内部可以直接使用this获取数据 -->
+<view class="item" bind:tap="onVideoItemTap">
+    <view class="album">
+        <image class="image" mode="widthFix" src="{{itemData.cover}}" />
+        <view class="info">
+            <view class="count">{{fmt.formatCount(itemData.playCount)}}</view>
+            <view class="duration">{{fmt.formatTime(itemData.mv.videos[0].duration)}}</view>
+        </view>
+    </view>
+    <view class="content">{{itemData.name}} - {{itemData.artistName}}</view>
+</view>

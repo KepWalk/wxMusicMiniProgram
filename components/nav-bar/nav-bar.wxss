@@ -1,0 +1,38 @@
+/* components/nav-bar/nav-bar.wxss */
+/* 自定义导航栏 */
+.nav {
+    display: flex;
+    /* 导航栏的高度每个设备都是固定的 */
+    height: 44px;
+    color: white;
+}
+
+.left, .right, .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .left, .nav .right {
+    width: 120rpx;
+}
+
+.nav .center {
+    flex: 1;
+}
+
+.left .icon {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+/* 控制标题的默认插槽 */
+.default {
+    display: none;
+}
+
+/* +选择最近的兄弟元素 */
+/* 这里使用flex，因为block图片的vertical-align是基线对齐，图片底部会多出一定的像素，flex布局就无关这些因素了 */
+.slot:empty + .default {
+    display: flex;
+}
